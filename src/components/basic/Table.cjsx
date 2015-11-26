@@ -1,12 +1,9 @@
 React = require 'react'
-Row = require './Row.cjsx'
+Tr = require './Tr.cjsx'
 
 module.exports = React.createClass
 	rows: ->
-		@props.data.map((element, i) -> <Row key={i}>{element}</Row>)
-
-	columns: ->
-		<Row>{@props.columns}</Row>
+		@props.data.map (element, i) -> <Tr key={i}>{element}</Tr>
 
 	render: ->
 		<table>
@@ -14,7 +11,3 @@ module.exports = React.createClass
 				{@rows()}
 			</tbody>
 		</table>
-
-			# <thead>
-			# 	{@columns()}
-			# </thead>

@@ -3,7 +3,7 @@ React = require 'react'
 module.exports = React.createClass
 	getDefaultProps: ->
 		type: 'text'
-		autofocus: true
+		autoFocus: true
 
 	render: ->
 		<input {...@props}/>

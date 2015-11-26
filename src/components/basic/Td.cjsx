@@ -13,5 +13,9 @@ module.exports = React.createClass
 		<td {...@props}>{@additionalComponent()}</td>
 
 ###
-	<Editable><Td></Editable>
+	<Editable>
+		<Td>
+			@props.value
+		</Td>
+	</Editable>
 ###
