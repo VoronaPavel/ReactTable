@@ -13,6 +13,8 @@ td {
 }
 
 input {
+	font-weight: 750;
+	font-size: inherit;
 	width: 99%;
 	height: 100%;
 }

@@ -2,11 +2,14 @@ React = require 'react'
 Input = require './Input.cjsx'
 
 module.exports = React.createClass
-	component: ->
+	getDefaultProps: ->
+		isEditing: false
+
+	printComponent: ->
 		if @props.isEditing
-			<Input {@props}> />
+			<Input {...@props} />
 		else
-			<div>{props.value}</div>
+			<div {...@props}>{@props.value}</div>
 
 	render: ->
-		@component()
+		@printComponent()
