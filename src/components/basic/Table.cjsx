@@ -1,5 +1,5 @@
 React = require 'react'
-Tr = require './Tr.cjsx'
+Tr = require './Tr'
 
 module.exports = React.createClass
 	rows: ->

@@ -1,6 +1,6 @@
 React = require 'react'
-Input = require './Input.cjsx'
-Editable = require './Editable.cjsx'
+Input = require './Input'
+Editable = require './Editable'
 
 module.exports = React.createClass
 	render: ->

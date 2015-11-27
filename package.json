@@ -1,6 +1,9 @@
 {
   "name": "its-partner",
   "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "devDependencies": {
     "browserify": "^12.0.1",
     "cjsx-loader": "^2.1.0",

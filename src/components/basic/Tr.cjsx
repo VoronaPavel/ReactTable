@@ -1,5 +1,5 @@
 React = require 'react'
-Td = require './Td.cjsx'
+Td = require './Td'
 
 module.exports = React.createClass
   getInitialState: ->

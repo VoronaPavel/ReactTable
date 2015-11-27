@@ -1,5 +1,5 @@
 React = require 'react'
-Input = require './Input.cjsx'
+Input = require './Input'
 
 module.exports = React.createClass
 	getDefaultProps: ->
