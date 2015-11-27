@@ -5,11 +5,11 @@ module.exports = React.createClass
 	getDefaultProps: ->
 		isEditing: false
 
-	printComponent: ->
+	renderComponent: ->
 		if @props.isEditing
 			<Input {...@props} />
 		else
 			<div {...@props}>{@props.value}</div>
 
 	render: ->
-		@printComponent()
+		@renderComponent()

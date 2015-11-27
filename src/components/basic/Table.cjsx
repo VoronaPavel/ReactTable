@@ -3,7 +3,8 @@ Tr = require './Tr.cjsx'
 
 module.exports = React.createClass
 	rows: ->
-		@props.data.map (element, i) -> <Tr key={i}>{element}</Tr>
+		@props.data.map (element, i) ->
+      <Tr key={i}>{element}</Tr>
 
 	render: ->
 		<table>

@@ -9,6 +9,6 @@ App = React.createClass
 
 columns = [['#', 'login', 'password']]
 
-data = [['1', 'pavel', '32adg1'], ['2', 'oleg', '432432'], ['3', 'aaaaaa', '12312']]
+data = [['1', 'pavel', 'aaaaa'], ['2', 'oleg', '432432'], ['3', 'aaaaaa', '12312']]
 
 ReactDOM.render <App columns={columns} data={data} />, document.getElementById 'app'
