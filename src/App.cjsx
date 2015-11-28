@@ -1,6 +1,6 @@
 React = require 'react'
 ReactDOM = require 'react-dom'
-Table = require './components/basic/Table.cjsx'
+Table = require './components/basic/Table'
 
 App = React.createClass
 	render: ->
