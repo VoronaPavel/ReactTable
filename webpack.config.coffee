@@ -15,4 +15,3 @@ module.exports =
     ]
   resolve:
     extensions: ['', '.js', '.coffee', '.cjsx']
-  watch: true
