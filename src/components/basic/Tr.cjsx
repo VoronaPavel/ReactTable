@@ -1,15 +1,12 @@
 React = require 'react'
-Td = require './Td'
+EditableTd = require './EditableTd'
 
 module.exports = React.createClass
   getInitialState: ->
     values: @props.children
 
-  onClick: (i) ->
-    if i is @state.indexOfEditing and @state.isEditing
-      @setState isEditing: false
-    else
-      @setState isEditing: true, indexOfEditing: i
+  onMouseOver: (i) ->
+    @setState indexOfEditing: i, isEditing: true
 
   onChange: (i, event) ->
     newValues = @state.values
@@ -21,8 +18,8 @@ module.exports = React.createClass
 
   elements: ->
     @props.children.map (child, i) =>
-      <Td key={i}
-          onClick={@onClick.bind(this, i)}
+      <EditableTd key={i}
+          onMouseOver={@onMouseOver.bind(this, i)}
           onChange={@onChange.bind(this, i)}
           isEditing={@isEditing(i)}
           value={@state.values[i]} />
