@@ -4,8 +4,7 @@ Table = require './components/basic/Table'
 
 App = React.createClass
 	render: ->
-		<Table data={@props.data} />
-
+		<Table data={@props.data}/>
 
 columns = [['#', 'login', 'password']]
 
