@@ -1,5 +1,5 @@
 React = require 'react'
-EditableTd = require './EditableTd'
+Editable = require './Editable'
 
 module.exports = React.createClass
   getInitialState: ->
@@ -16,13 +16,16 @@ module.exports = React.createClass
   isEditing: (i) ->
     @state.isEditing and i is @state.indexOfEditing
 
-  elements: ->
-    @props.children.map (child, i) =>
-      <EditableTd key={i}
-          onMouseOver={@onMouseOver.bind(this, i)}
-          onChange={@onChange.bind(this, i)}
-          isEditing={@isEditing(i)}
-          value={@state.values[i]} />
-
   render: ->
-    <tr>{@elements()}</tr>
+    <tr>
+      {(for child, i in @props.children
+        <td key={i}>
+          <Editable>
+            <div
+              onMouseOver={@onMouseOver.bind(this, i)}
+              onChange={@onChange.bind(this, i)}
+              isEditing={@isEditing(i)}
+              value={@state.values[i]} />
+          </Editable>
+        </td>)}
+    </tr>
